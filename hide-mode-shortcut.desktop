@@ -1,0 +1,33 @@
+[Desktop Entry]
+Version=1.0
+Name=Hide Mode
+Comment=Configure Plank's hide mode right on the dock
+Exec=echo -n
+Terminal=false
+Icon=plank
+Type=Application
+Actions=NoHide;Intelli;Auto;DodgeMaxi;DodgeAll;DodgeActive;
+
+[Desktop Action NoHide]
+Name=Disable
+Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'none'"
+
+[Desktop Action Intelli]
+Name=Intelligent
+Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'intelligent'"
+
+[Desktop Action Auto]
+Name=Auto
+Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'auto'"
+
+[Desktop Action DodgeMaxi]
+Name=Dodge Maximized
+Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'dodge-maximized'"
+
+[Desktop Action DodgeAll]
+Name=Dodge All Windows
+Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'window-dodge'"
+
+[Desktop Action DodgeActive]
+Name=Dodge Active Window
+Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'dodge-active'"
