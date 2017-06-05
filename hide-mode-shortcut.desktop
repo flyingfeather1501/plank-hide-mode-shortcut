@@ -1,7 +1,11 @@
 [Desktop Entry]
 Version=1.0
 Name=Hide Mode
+Name[zh_TW]=隱藏模式
+Name[ja]=隠すモード
 Comment=Configure Plank's hide mode right on the dock
+Comment[zh_TW]=直接在dock上切換Plank的隱藏模式
+Comment[ja]=ドックで隠すモードを簡単に設定する
 Exec=echo -n
 Terminal=false
 Icon=plank
@@ -9,25 +13,37 @@ Type=Application
 Actions=NoHide;Intelli;Auto;DodgeMaxi;DodgeAll;DodgeActive;
 
 [Desktop Action NoHide]
-Name=Disable
+Name=Disable Hiding
+Name[zh_TW]=不隱藏
+Name[ja]=隠さない
 Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'none'"
 
 [Desktop Action Intelli]
-Name=Intelligent
+Name=Intellihide
+Name[zh_TW]=智慧隱藏
+Name[ja]=賢く隠す
 Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'intelligent'"
 
 [Desktop Action Auto]
-Name=Auto
+Name=Autohide
+Name[zh_TW]=自動隱藏
+Name[ja]=自動的に隠す
 Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'auto'"
 
 [Desktop Action DodgeMaxi]
 Name=Dodge Maximized
+Name[zh_TW]=閃躲最大化視窗
+Name[ja]=最大化されたウィンドウを回避
 Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'dodge-maximized'"
 
 [Desktop Action DodgeAll]
 Name=Dodge All Windows
+Name[zh_TW]=閃躲所有視窗
+Name[ja]=全てのウィンドウを回避
 Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'window-dodge'"
 
 [Desktop Action DodgeActive]
 Name=Dodge Active Window
+Name[zh_TW]=閃躲活躍視窗
+Name[ja]=アクティブなウィンドウを回避
 Exec=dconf write /net/launchpad/plank/docks/dock1/hide-mode "'dodge-active'"
